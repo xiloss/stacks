@@ -5,20 +5,20 @@ metadata:
   namespace: default
   labels:
     entity-id: ${{values.name}}
-    app: nginx
+    app: ${{values.name}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: ${{values.name}}
   template:
     metadata:
       labels:
-        app: nginx
+        app: ${{values.name}}
         entity-id: ${{values.name}}
     spec:
       containers:
         - name: nginx
-          image: nginx:1.14.2
+          image: ${{values.image}}
           ports:
             - containerPort: 80
