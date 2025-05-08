@@ -11,10 +11,15 @@ spec:
     - title: Configuration Options
       required:
         - name
+        - image
       properties:
         name:
           type: string
           description: name of this application
+        
+        image:
+          type: string
+          description: image to deploy  
         
   steps:
     - id: template
@@ -24,6 +29,7 @@ spec:
         url: ./skeleton
         values:
           name: ${{parameters.name}}
+          image: ${{parameters.image}}
 
     - id: publish
       name: Publishing to a gitea git repository
