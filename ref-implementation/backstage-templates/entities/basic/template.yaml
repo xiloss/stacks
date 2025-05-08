@@ -29,6 +29,7 @@ spec:
         url: ./skeleton
         values:
           name: ${{parameters.name}}
+          image: ${{parameters.image}}
 
     - id: publish
       name: Publishing to a gitea git repository
