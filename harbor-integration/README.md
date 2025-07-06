@@ -39,7 +39,7 @@ Use the below command to deploy an IDP reference implementation with an Argo app
 idpbuilder create \
   --use-path-routing \
   --package https://github.com/cloudstation-dev/stacks//ref-implementation \
-  --package https://github.com/cloudstation-dev/stacks//harbor-integration
+  --package https://github.com/cloudstation-dev/stacks//harbor-integration \
   --kind-config kind-config.yaml
 ```
 
