@@ -48,7 +48,7 @@ or just add the Harbor ArgoCD Application to an existing idpbuilder installation
 ```bash
 idpbuilder create \
   --use-path-routing \
-  --package https://github.com/cloudstation-dev/stacks//harbor-integration 
+  --package https://github.com/cloudstation-dev/stacks//harbor-integration \
   --kind-config kind-config.yaml
 ```
 
